@@ -4,9 +4,9 @@
     "version": "0.0.1",
     "description": "AsteroidApp - Flash Browser Application for Windows and Mac",
     "license": "MIT",
-    "author": "Leet Games",
+    "author": "Peace Hotel MY ",
     "main": "app.js",
-    "repository": "asteroid-dev/asteroidapp",
+    "repository": "airilx96/asteroidapp",
     "flash_version": "32.0.0.363",
     "scripts": {
         "postinstall": "electron-builder install-app-deps",
@@ -14,8 +14,10 @@
         "test": "npm run lint",
         "start": "electron .",
         "pack": "electron-builder --dir",
-        "mac": "electron-builder --macos",
+        "mac": "electron-builder --macos -p",
         "windows": "electron-builder --windows",
+        "win32-installer": "electron-builder --ia32",
+        "win64-installer": "electron-builder --x64",
         "linux": "electron-builder --linux",
         "release": "np"
     },
@@ -46,12 +48,10 @@
     },
     "build": {
         "appId": "nl.Peace.PeaceHotel",
-        "extraResources": [
-            {
-                "from": "./plugins/",
-                "to": "../plugins"
-            }
-        ],
+        "extraResources": [{
+            "from": "./plugins/",
+            "to": "../plugins"
+        }],
         "mac": {
             "category": "public.games.social-networking",
             "darkModeSupport": true,
@@ -62,8 +62,7 @@
         },
         "dmg": {
             "iconSize": 160,
-            "contents": [
-                {
+            "contents": [{
                     "x": 180,
                     "y": 170
                 },
@@ -83,15 +82,18 @@
             "category": "Network;Chat"
         },
         "win": {
-            "target": [
-                {
-                    "target": "nsis",
-                    "arch": [
-                        "x64",
-                        "ia32"
-                    ]
-                }
-            ]
+            "target": [{
+                "target": "nsis",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            }]
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": false,
+            "allowToChangeInstallationDirectory": true
         }
     }
 }
