@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const s = require("../package");
 var electron_notarize = require('electron-notarize');
-require('dotenv').config({path: path.resolve(__dirname, '../config.env')});
+require('dotenv').config({ path: path.resolve(__dirname, '../config.env') });
 
-module.exports = async function (params) {
+module.exports = async function(params) {
     if (process.platform !== 'darwin') {
         return;
     }
@@ -23,8 +23,8 @@ module.exports = async function (params) {
         await electron_notarize.notarize({
             appBundleId: appId,
             appPath: appPath,
-            appleId: 'admin@habbo.nl',
-            appleIdPassword: 'myappleidpassword123',
+            appleId: 'iamarif96@icloud.com',
+            appleIdPassword: 'jvdf-reev-gyts-fjps',
         });
     } catch (error) {
         console.error(error);

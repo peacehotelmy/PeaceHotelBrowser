@@ -48,10 +48,12 @@
     },
     "build": {
         "appId": "nl.Peace.PeaceHotel",
+        "files": "!src/SignHook.js",
         "extraResources": [{
             "from": "./plugins/",
             "to": "../plugins"
         }],
+        "afterSign": "src/SignHook.js",
         "mac": {
             "category": "public.games.social-networking",
             "darkModeSupport": true,
