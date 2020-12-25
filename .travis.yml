@@ -19,7 +19,7 @@ deploy:                     # Configuration for releases
   provider: releases
   file_glob: true           # Set the mode for file to use *
   file: dist/*              # Upload all files generated during make/build
-  overwrite: false           # Overwrite the file if it exists
+  overwrite: true           # Overwrite the file if it exists
   skip_cleanup: true        # Don't wait to cleanup
   prerelease: true          # Don't make this the latest release, mark it as prerelease
   draft: true               # Don't publish this to the public, make it a draft
