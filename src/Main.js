@@ -48,7 +48,8 @@ class u {
                 break;
         }
 
-        e.commandLine.appendSwitch("disable-renderer-backgrounding"), e.commandLine.appendSwitch("--enable-npapi"), e.commandLine.appendSwitch("--ppapi-flash-path", n), e.commandLine.appendSwitch("--ppapi-flash-version", r), e.commandLine.appendSwitch("high-dpi-support", 1), e.commandLine.appendSwitch("force-device-scale-factor", 1)
+        e.commandLine.appendSwitch("disable-renderer-backgrounding"), e.commandLine.appendSwitch("--enable-npapi"), e.commandLine.appendSwitch("--ppapi-flash-path", n), e.commandLine.appendSwitch("--ppapi-flash-version", r), e.commandLine.appendSwitch('disable-gpu'), e.commandLine.appendArgument('disable-gpu') /* , e.commandLine.appendSwitch("high-dpi-support", 1), e.commandLine.appendSwitch("force-device-scale-factor", 1) */
+        e.disableHardwareAcceleration();
     }
     renderHome() {
         const e = new o(1200, 800, !0, !0, !1, "home");
