@@ -1,9 +1,9 @@
 const {
-	Menu: e
+    Menu: e
 } = require("electron"), u = [{
-	label: "Quit Asteroid App",
-	submenu: [{
-		role: "quit"
-	}]
+    label: "Quit Peace Hotel Browser",
+    submenu: [{
+        role: "quit"
+    }]
 }];
 module.exports = e.buildFromTemplate(u);

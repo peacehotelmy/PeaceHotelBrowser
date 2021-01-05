@@ -15,14 +15,40 @@
         </nav>
 
         <div class="me__buttons">
+            <button id="zoomIn" class="me__zoomIn">
+                <i id="meZoomInIcon" class="fas fa-search-plus"></i>
+            </button>
+            <button id="zoomOut" class="me__zoomOut">
+                <i id="meZoomOutIcon" class="fas fa-search-minus"></i>
+            </button>
+            <button id="clearCache" class="me__clearCache">
+                <i id="meclearCacheIcon" class="fas fa-trash"></i>
+            </button>
             <button id="reload" class="me__reload">
-            <i id="meReloadIcon" class="fas fa-sync-alt"></i>
-        </button>
+                <i id="meReloadIcon" class="fas fa-sync-alt"></i>
+            </button>
             <button id="fullScreen" class="me__fullscreen">
-            <i id="fullScreenIcon" class="fas fa-expand-arrows-alt"></i>
-        </button>
+                <i id="fullScreenIcon" class="fas fa-expand-arrows-alt"></i>
+            </button>
         </div>
     </header>
+    <div id="alert" class="alert">
+        <div class="box">
+            <div class="title">Clear Cache?</div>
+            <div id="description" class="description">Browser will be restarted while clearing web cache.</div>
+            <div class="btns">
+                <div id="cancel" class="button" style="float:left;background: #ed1c24;">
+                    <div class="alpha"></div>
+                    Cancel
+                </div>
+
+                <div id="confirm" class="button">
+                    <div class="alpha"></div>
+                    Proceed
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="wrapper"></div>
     <section class="logout__process">
         <img src="../resources/img/loading.gif">

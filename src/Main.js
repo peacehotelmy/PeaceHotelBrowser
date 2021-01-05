@@ -5,14 +5,14 @@ const {
     Menu: t
 } = require("electron"), s = require("path"), i = require("./Windows").getInstance(), o = require("./Window"), c = require("os"), l = require("../package"), p = require("./Menu");
 
-e.setAppUserModelId("nl.habbo.AsteroidApp");
+e.setAppUserModelId("nl.Peace.PeaceHotel");
 
 class u {
     static getInstance() {
         return u._instance || (u._instance = new u), u._instance
     }
     async init() {
-        this._running || (this._running = !0, e.on("ready", () => this._ready()), n.on("renderHome", () => this.renderHome()), n.on("logout", () => this.renderHome()), n.on("fullScreen", (e, n) => i.get("home").toggleFullScreen()))
+        this._running || (this._running = !0, e.on("ready", () => this._ready()), n.on("renderHome", () => this.renderHome()), n.on("logout", () => this.renderHome()), n.on("fullScreen", (e, n) => i.get("home").toggleFullScreen()), n.on("zoomIn", () => i.get("home").toggleZoomIn()), n.on("zoomOut", () => i.get("home").toggleZoomOut()), n.on("clearCache", () => i.get("home").clearCache()))
     }
     async _ready() {
         r.defaultSession.webRequest.onBeforeSendHeaders({
