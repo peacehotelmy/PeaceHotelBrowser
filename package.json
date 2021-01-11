@@ -1,7 +1,7 @@
 {
     "name": "asteroid",
     "productName": "Peace Hotel Browser",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "Flash Browser Application for Windows and Mac",
     "license": "MIT",
     "author": "Peace Hotel MY ",
@@ -19,13 +19,11 @@
         "win32-installer": "electron-builder --ia32",
         "win64-installer": "electron-builder --x64",
         "linux": "electron-builder --linux",
-        "release": "np"
+        "release": "np",
+        "checker": "npm-check"
     },
     "dependencies": {
-        "del": "^5.1.0",
         "dotenv": "^8.2.0",
-        "electron-simple-updater": "^2.0.8",
-        "jquery": "^3.5.0",
         "jquery-easing": "0.0.1"
     },
     "devDependencies": {
